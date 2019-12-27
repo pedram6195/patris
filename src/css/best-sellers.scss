@@ -1,0 +1,97 @@
+.best-sellers {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    h3 {
+      color: #4d4d4d;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-weight: 300;
+      width: 50%;
+      text-align: center;
+      line-height: 1.8;
+      @media only screen and (max-width: 767px){
+          width: 90%;
+      }
+    }
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    a {
+      font-size: 1.4rem;
+      color: #4d4d4d;
+      border-bottom: 1px solid rgba(77, 77, 77, 0.5);
+      &:hover {
+        border: none;
+      }
+    }
+    .navigation-buttons {
+        display: flex;
+        button {
+            border: none;
+            outline: none;
+            margin: 0 .5rem;
+            cursor: pointer;
+            background-color: #efefef;
+            padding: .5rem 1rem;
+            i {
+                font-size: 3rem;
+                color: #4d4d4d;
+            }
+        }
+    }
+  }
+  .special-suggest-slider {
+    margin-bottom: 2rem;
+    .slick-slide {
+      padding: 0 1rem;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      direction: rtl;
+      .item-image {
+        height: 21rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        img {
+          height: 18.5rem;
+          width: auto;
+        }
+      }
+      .item-title {
+        font-size: 1.4rem;
+        color: #444;
+        padding: 1rem 0;
+      }
+      .price {
+        color: #fb3449;
+        text-decoration: line-through;
+        font-size: 1.4rem;
+      }
+      .discount {
+        color: #4caf50;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

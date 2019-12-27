@@ -1,0 +1,109 @@
+.footer {
+  background-color: #49484b;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  padding: 2.5rem 1.5rem;
+  @media only screen and (max-width: 620px) {
+    flex-direction: column;
+  }
+  * {
+    color: white;
+  }
+  & > * {
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+    @media only screen and (max-width: 620px) {
+      padding: 0 0.5rem;
+    }
+  }
+  h2 {
+    font-size: 1.9rem;
+    font-weight: 300;
+  }
+  hr {
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1rem 0;
+  }
+  p {
+    margin: 1rem 0 2rem;
+    width: 95%;
+    line-height: 1.8;
+  }
+  .customer-services {
+    flex-basis: 28%;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 1200px) {
+      flex-basis: 45%;
+    }
+  }
+  .newsletter {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 1200px) {
+      flex-basis: 55%;
+    }
+    form {
+      display: flex;
+      * {
+        border: none;
+        outline: none;
+
+        font-family: inherit;
+        border-radius: 3px;
+        padding: 1rem;
+      }
+      input {
+        color: #666;
+        margin-left: 2rem;
+        flex-grow: 1;
+      }
+      button {
+        background-color: #38ca6f;
+        cursor: pointer;
+      }
+    }
+  }
+  .contact-us {
+    flex-basis: 32%;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 1200px) {
+      flex-basis: 100%;
+    }
+    .head {
+      display: flex;
+      justify-content: space-between;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      .info {
+        display: flex;
+        flex-direction: column;
+      }
+      .logos {
+        padding: 0 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        margin: auto;
+        a {
+          margin: 0 1rem;
+          i {
+            font-size: 3.5rem;
+            @media only screen and (max-width: 380px) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

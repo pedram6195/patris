@@ -1,0 +1,43 @@
+.top-slider-item {
+  height: 25rem;
+  background: url("../img/img.png") no-repeat 50% 50%;
+  background-size: cover;
+  padding-right: 10rem;
+  padding-top: 8rem;
+  @media only screen and (max-width: 500px) {
+    padding-right: 0;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media only screen and (max-width: 500px) {
+      justify-content: center;
+      align-items: center;
+    }
+    .specs-link {
+      color: white;
+      background-color: #38ca6f;
+      border-radius: 3px;
+      padding: 1rem 2rem;
+    }
+    .description-info {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      color: #444;
+      margin-top: 1rem;
+      padding: 2rem 1rem;
+      width: 38rem;
+      border-radius: 3px;
+      @media only screen and (max-width: 767px) {
+        width: auto;
+      }
+      .description-price {
+        @media only screen and (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
