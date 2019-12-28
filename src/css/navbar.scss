@@ -15,10 +15,11 @@
       opacity: 0.8;
     }
   }
-  .logo {
-    background-color: #333;
-  }
+
   .top-nav-right {
+    li.active {
+      background-color: #333;
+    }
     display: flex;
     @media only screen and (max-width: 500px) {
       flex-direction: column;

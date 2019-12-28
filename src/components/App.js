@@ -1,30 +1,39 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import "pace-js";
+import "pace-js/themes/blue/pace-theme-minimal.css";
 
 import "../css/fontiran.css";
 import "../css/app.scss";
 
+import routes from "../config/routes";
+
 import Navbar from "./Navbar";
-import TopMenu from "./TopMenu";
-import TopSlider from "./TopSlider";
-import SpecialSuggest from "./SpecialSuggest";
-import Pictures from "./Pictures";
-import BestSellers from "./BestSellers";
-import Critics from "./Critics";
+import Content from "./Content";
 import Footer from "./Footer";
+import NotFound from "./NotFound";
 
 class App extends Component {
   render() {
     return (
-      <>
+      <Router>
         <Navbar />
-        <TopMenu />
-        <TopSlider />
-        <SpecialSuggest />
-        <Pictures />
-        <BestSellers />
-        <Critics />
+        <Content>
+          <Switch>
+            {routes.map(route => (
+              <Route
+                exact
+                path={route.path}
+                component={route.component}
+                key={route.path}
+              />
+            ))}
+            <Route component={NotFound} />
+          </Switch>
+        </Content>
         <Footer />
-      </>
+      </Router>
     );
   }
 }

@@ -1,0 +1,119 @@
+$myRed: #e5294c;
+$myBlue: #2d68f4;
+$myDarkBlue: rgb(0, 40, 134);
+
+.container {
+  background: linear-gradient(
+      135deg,
+      rgba(26, 188, 156, 0.45) 20%,
+      rgba(41, 128, 185, 0.45) 80%
+    ),
+    url("../img/128-204.jpg");
+}
+
+.login-header {
+  border-bottom: 2px solid $myRed;
+  margin-bottom: 1.5rem;
+}
+
+.login {
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  background: white;
+  border-radius: 5px;
+}
+
+.form-item {
+  padding: 1rem;
+  i {
+    color: $myRed;
+  }
+}
+
+.form-control {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  padding: 0.5rem;
+  font-family: inherit;
+  &:focus {
+    outline-offset: 0;
+    outline: none;
+  }
+}
+
+.login-helper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-helper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.check-label {
+  font-size: 13px;
+  padding-right: 0.25rem;
+  vertical-align: top;
+}
+
+.forgot-pass {
+  font-size: 13px;
+  color: $myBlue;
+  &:hover {
+    color: $myDarkBlue;
+    text-decoration: underline;
+  }
+}
+
+.register-link {
+  @extend .forgot-pass;
+  display: block;
+}
+
+// button {
+//   width: 100%;
+//   height: 3rem;
+//   font-size: 1.5rem;
+//   font-family: inherit;
+//   border-radius: 5px;
+//   border: 2px solid $myRed;
+//   color: whitesmoke;
+//   background: $myRed;
+//   transition: background 0.3s, color 0.3s;
+//   &:hover {
+//     cursor: pointer;
+//     background: whitesmoke;
+//     color: $myRed;
+//   }
+// }
+
+.error {
+  color: $myRed;
+  font-size: 0.75rem;
+}
+
+// for mobile phones
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-weight: 400;
+  }
+  .login {
+    width: 90vw;
+  }
+}
+
+// for tablets
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-weight: 400;
+  }
+  .login {
+    width: 60vw;
+  }
+}
