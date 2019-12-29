@@ -9,6 +9,7 @@ import Critics from "./Critics";
 
 export default class Home extends Component {
   render() {
+    document.title = "فروشگاه زنجیره ای پاتریس";
     return (
       <div className="fade">
         <TopMenu />

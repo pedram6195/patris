@@ -27,10 +27,14 @@ const RegisterSchema = Yup.object().shape({
 export default function Register() {
   document.title = "ثبت نام";
   return (
-    <div className="container">
-      <div className="login fade">
-        <header className="login-header center">
+    <div className="container fade">
+      <div className="register">
+        <header className="register-header text-center">
           <h1>ثبت نام</h1>
+          <p>
+            با عضویت در فروشگاه پاتریس میتوانید از امکانات بیشتر و همچنین
+            تخفیفات ویژه بهره مند شوید
+          </p>
         </header>
         <Formik
           initialValues={{
@@ -41,6 +45,7 @@ export default function Register() {
             rules: false
           }}
           validationSchema={RegisterSchema}
+          validateOnBlur={false}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
@@ -49,43 +54,37 @@ export default function Register() {
           }}
         >
           {({ isSubmitting }) => (
-            <Form>
-              <div className="form-item right">
-                <label htmlFor="name">
-                  نام و نام خانوادگی <i className="fas fa-address-card"></i>
-                </label>
+            <Form className="register-box">
+              <label htmlFor="user-info" className="user-info">
+                اطلاعات کاربری
+              </label>
+              <div className="form-item">
                 <Field
                   type="text"
                   name="name"
                   id="name"
-                  className="form-control right"
-                  placeholder="لطفا فقط به فارسی تایپ کنید"
+                  className="form-control"
+                  placeholder="نام و نام خانوادگی خود را وارد کنید (فقط فارسی)"
                   autoComplete="off"
                 />
                 <ErrorMessage name="name" component="div" className="error" />
               </div>
-              <div className="form-item right">
-                <label htmlFor="email">
-                  ایمیل <i className="fas fa-envelope"></i>
-                </label>
+              <div className="form-item">
                 <Field
-                  type="email"
+                  type="text"
                   name="email"
                   id="email"
-                  className="form-control right"
+                  className="form-control"
                   placeholder="ایمیل خود را وارد کنید"
                 />
                 <ErrorMessage name="email" component="div" className="error" />
               </div>
-              <div className="form-item right">
-                <label htmlFor="username">
-                  نام کاربری <i className="fas fa-user"></i>
-                </label>
+              <div className="form-item">
                 <Field
                   type="text"
                   name="username"
                   id="username"
-                  className="form-control right"
+                  className="form-control"
                   placeholder="نام کاربری خود را وارد کنید"
                   autoComplete="off"
                 />
@@ -95,15 +94,12 @@ export default function Register() {
                   className="error"
                 />
               </div>
-              <div className="form-item right">
-                <label htmlFor="password">
-                  رمز عبور <i className="fas fa-key"></i>
-                </label>
+              <div className="form-item">
                 <Field
                   type="password"
                   name="password"
                   id="password"
-                  className="form-control right"
+                  className="form-control"
                   placeholder="رمز عبور را وارد کنید"
                   autoComplete="off"
                 />
@@ -113,31 +109,34 @@ export default function Register() {
                   className="error"
                 />
               </div>
-              <div className="form-item register-helper">
-                <div className="remember-me right">
-                  <label htmlFor="rules" className="check-label">
+              <div className="form-item">
+                <label htmlFor="rules" className="rules">
+                  <Field
+                    type="checkbox"
+                    name="rules"
+                    id="rules"
+                    className="rule-checkbox"
+                  />
+                  <span>
                     با تمام{" "}
                     <a href="##" className="forgot-pass" target="_blank">
                       قوانین
                     </a>{" "}
                     سایت موافقم
-                  </label>
-                  <Field type="checkbox" name="rules" id="rules" />
-                  <ErrorMessage
-                    name="rules"
-                    component="div"
-                    className="error"
-                  />
-                </div>
+                  </span>
+                </label>
+                <ErrorMessage name="rules" component="div" className="error" />
               </div>
               <div className="form-item">
                 <button type="submit" disabled={isSubmitting}>
                   ثبت نام
                 </button>
               </div>
-              <Link to="/Login" className="register-link center">
-                حساب کاربری دارید؟ از اینجا وارد شوید
-              </Link>
+              <div className="form-item">
+                <Link to="/login" className="login-link">
+                  حساب کاربری دارید؟ از اینجا وارد شوید
+                </Link>
+              </div>
             </Form>
           )}
         </Formik>

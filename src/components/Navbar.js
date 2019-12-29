@@ -29,8 +29,10 @@ class Navbar extends React.Component {
             </li>
           </ul>
           <ul className="top-nav-left">
-            <li>
-              <a href="##">محصولات ویژه</a>
+            <li className={this.getNavLinkClass("/products")}>
+              <NavLink to="/products" activeClassName="active">
+                محصولات ویژه
+              </NavLink>
             </li>
             <li>
               <a href="##">تخفیف ها</a>

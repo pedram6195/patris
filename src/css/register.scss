@@ -1,119 +1,103 @@
 $myRed: #e5294c;
-$myBlue: #2d68f4;
-$myDarkBlue: rgb(0, 40, 134);
 
 .container {
-  background: linear-gradient(
-      135deg,
-      rgba(26, 188, 156, 0.45) 20%,
-      rgba(41, 128, 185, 0.45) 80%
-    ),
-    url("../img/128-204.jpg");
-}
-
-.login-header {
-  border-bottom: 2px solid $myRed;
-  margin-bottom: 1.5rem;
-}
-
-.login {
-  margin: auto;
-  padding: 1rem;
+  background: linear-gradient(135deg, #1abc9c 20%, #2980b9 80%);
+  padding: 8rem 2rem;
   display: flex;
-  flex-direction: column;
-  width: 32%;
-  background: white;
-  border-radius: 5px;
-}
-
-.form-item {
-  padding: 1rem;
-  i {
-    color: $myRed;
-  }
-}
-
-.form-control {
-  width: 100%;
-  margin-top: 0.5rem;
-  border-radius: 4px;
-  border: none;
-  padding: 0.5rem;
-  font-family: inherit;
-  &:focus {
-    outline-offset: 0;
-    outline: none;
-  }
-}
-
-.login-helper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.register-helper {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.check-label {
-  font-size: 13px;
-  padding-right: 0.25rem;
-  vertical-align: top;
-}
-
-.forgot-pass {
-  font-size: 13px;
-  color: $myBlue;
-  &:hover {
-    color: $myDarkBlue;
-    text-decoration: underline;
-  }
-}
-
-.register-link {
-  @extend .forgot-pass;
-  display: block;
-}
-
-// button {
-//   width: 100%;
-//   height: 3rem;
-//   font-size: 1.5rem;
-//   font-family: inherit;
-//   border-radius: 5px;
-//   border: 2px solid $myRed;
-//   color: whitesmoke;
-//   background: $myRed;
-//   transition: background 0.3s, color 0.3s;
-//   &:hover {
-//     cursor: pointer;
-//     background: whitesmoke;
-//     color: $myRed;
-//   }
-// }
-
-.error {
-  color: $myRed;
-  font-size: 0.75rem;
-}
-
-// for mobile phones
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-weight: 400;
-  }
-  .login {
-    width: 90vw;
-  }
-}
-
-// for tablets
-@media (min-width: 768px) and (max-width: 1024px) {
-  h1 {
-    font-weight: 400;
-  }
-  .login {
-    width: 60vw;
+  justify-content: center;
+  align-items: center;
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .register-header {
+      color: white;
+      margin-bottom: 2rem;
+      h1 {
+        font-weight: 500;
+        letter-spacing: -1px;
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+        margin-top: 0;
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1.8;
+      }
+    }
+    .register-box {
+      padding: 2rem;
+      background-color: white;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .user-info {
+        color: #555;
+        margin-bottom: 1rem;
+      }
+      .form-item {
+        margin: 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        .form-control {
+          padding: 1rem 1.5rem;
+          font-family: inherit;
+          font-size: 1.2rem;
+          width: 100%;
+          border-radius: 3px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          transition: all 0.2s;
+          &:hover {
+            border: 1px solid rgba(0, 0, 0, 0.4);
+          }
+          &:focus {
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+          }
+        }
+        .error {
+          padding-right: 0.5rem;
+          color: $myRed;
+          font-size: 1.2rem;
+        }
+        label.rules {
+          display: flex;
+          align-items: center;
+          font-size: 1.4rem;
+          margin: 1.5rem 0;
+          .rule-checkbox {
+            margin-left: 0.5rem;
+          }
+          span {
+            color: #555;
+          }
+        }
+        button {
+          border: none;
+          color: white;
+          border-radius: 3px;
+          padding: 1rem;
+          font-family: inherit;
+          cursor: pointer;
+          background-color: #3498db;
+          transition: all 0.3s;
+          &:hover {
+            background-color: #2980b9;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .login-link {
+          font-size: 1.3rem;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
