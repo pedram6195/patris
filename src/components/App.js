@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "pace-js";
 import "pace-js/themes/blue/pace-theme-minimal.css";
@@ -17,7 +17,7 @@ import NotFound from "./NotFound";
 class App extends Component {
   render() {
     return (
-      <HashRouter basename="/">
+      <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Content>
           <Switch>
@@ -33,7 +33,7 @@ class App extends Component {
           </Switch>
         </Content>
         <Footer />
-      </HashRouter>
+      </Router>
     );
   }
 }
