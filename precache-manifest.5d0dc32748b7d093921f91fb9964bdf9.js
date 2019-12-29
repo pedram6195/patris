@@ -1,35 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "987824066a9be6617115f6eef7d2472d",
+    "revision": "57445372fcb584c20e4aa215c115c5a4",
     "url": "/patris/index.html"
   },
   {
-    "revision": "2020084f202fe8ef1830",
+    "revision": "c99daeb07f6829f67b7d",
     "url": "/patris/static/css/2.33d03a39.chunk.css"
   },
   {
-    "revision": "e266f0362c0e5493fda1",
-    "url": "/patris/static/css/main.88394356.chunk.css"
+    "revision": "b1e633ca8566d84fd621",
+    "url": "/patris/static/css/main.ce9036fd.chunk.css"
   },
   {
-    "revision": "2020084f202fe8ef1830",
-    "url": "/patris/static/js/2.6816104f.chunk.js"
+    "revision": "c99daeb07f6829f67b7d",
+    "url": "/patris/static/js/2.12f0457a.chunk.js"
   },
   {
     "revision": "a061c13f4a777e8ad219193f87c5da40",
-    "url": "/patris/static/js/2.6816104f.chunk.js.LICENSE"
+    "url": "/patris/static/js/2.12f0457a.chunk.js.LICENSE"
   },
   {
-    "revision": "e266f0362c0e5493fda1",
-    "url": "/patris/static/js/main.153d0985.chunk.js"
+    "revision": "b1e633ca8566d84fd621",
+    "url": "/patris/static/js/main.448b3e83.chunk.js"
   },
   {
     "revision": "9aec4cca0eef967888e0",
     "url": "/patris/static/js/runtime-main.56f76918.js"
-  },
-  {
-    "revision": "a6c7ea276d20bb327fe9fb4b5eb48674",
-    "url": "/patris/static/media/128-204.a6c7ea27.jpg"
   },
   {
     "revision": "ac22d187130d6c3433a49a1e98bfa968",
