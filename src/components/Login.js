@@ -15,7 +15,7 @@ const LoginSchema = Yup.object().shape({
 export default function Register() {
   document.title = "ورود";
   return (
-    <div className="container fade">
+    <div className="reg fade">
       <div className="register">
         <header className="register-header text-center">
           <h1>ورود به سامانه</h1>

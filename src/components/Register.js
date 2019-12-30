@@ -27,7 +27,7 @@ const RegisterSchema = Yup.object().shape({
 export default function Register() {
   document.title = "ثبت نام";
   return (
-    <div className="container fade">
+    <div className="reg fade">
       <div className="register">
         <header className="register-header text-center">
           <h1>ثبت نام</h1>
