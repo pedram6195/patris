@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "07d82efbc24816d41b816397fe58b60f",
+    "revision": "e229d701db153ec32002bb111f684a7b",
     "url": "/patris/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/patris/static/css/2.f030cd79.chunk.css"
   },
   {
-    "revision": "e5bed55c48190e28e687",
-    "url": "/patris/static/css/main.5517f5fd.chunk.css"
+    "revision": "aa9464813047dbb9543e",
+    "url": "/patris/static/css/main.8033153e.chunk.css"
   },
   {
     "revision": "a13cf4be0ee7eb23a922",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/patris/static/js/2.273499bf.chunk.js.LICENSE"
   },
   {
-    "revision": "e5bed55c48190e28e687",
-    "url": "/patris/static/js/main.3cca9474.chunk.js"
+    "revision": "aa9464813047dbb9543e",
+    "url": "/patris/static/js/main.9789a6a6.chunk.js"
   },
   {
     "revision": "9aec4cca0eef967888e0",
