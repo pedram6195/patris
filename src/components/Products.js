@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Range from "rc-slider/lib/Range";
 
-import { toPersianNum } from '../helpers';
+import { toPersianNum } from "../helpers";
 
 import TopMenu from "./TopMenu";
 
@@ -23,38 +23,73 @@ class Products extends Component {
         <div className="products fade row">
           <section className="sidebar">
             <div className="price-limit">
-              <h3>محدوده قیمت</h3>
-              <hr />
-              <div className="range">
-                <Range
-                  min={0}
-                  max={3000000}
-                  onChange={this.handleChange}
-                  defaultValue={sliderValues}
-                  allowCross={false}
-                  step={50000}
-                  reverse={true}
-                />
-                <div className="range-details">
-                  <div className="from">
-                    <span>از</span>
-                    <span>{toPersianNum(sliderValues[0])}</span>
-                    <span>تومان</span>
+              <input type="checkbox" id="price-limit-toggle" />
+              <div className="price-limit-head">
+                <h3>محدوده قیمت</h3>
+                <label htmlFor="price-limit-toggle">
+                  <i className="fas fa-chevron-down"></i>
+                </label>
+              </div>
+              <div className="price-limit-content">
+                <hr />
+                <div className="range">
+                  <Range
+                    min={0}
+                    max={3000000}
+                    onChange={this.handleChange}
+                    defaultValue={sliderValues}
+                    allowCross={false}
+                    step={50000}
+                    reverse={true}
+                  />
+                  <div className="range-details">
+                    <div className="from">
+                      <span>از</span>
+                      <span>{toPersianNum(sliderValues[0])}</span>
+                      <span>تومان</span>
+                    </div>
+                    <div className="to">
+                      <span>تا</span>
+                      <span>{toPersianNum(sliderValues[1])}</span>
+                      <span>تومان</span>
+                    </div>
                   </div>
-                  <div className="to">
-                    <span>تا</span>
-                    <span>{toPersianNum(sliderValues[1])}</span>
-                    <span>تومان</span>
-                  </div>
+                  <button className="range-submit">اعمال</button>
                 </div>
-                <button className="range-submit">
-                    اعمال
-                </button>
               </div>
             </div>
             <div className="brands">
-              <h3>برند</h3>
-              <hr />
+              <input type="checkbox" id="brands-toggle" />
+              <div className="brands-head">
+                <h3>برند</h3>
+                <label htmlFor="brands-toggle">
+                  <i className="fas fa-chevron-down"></i>
+                </label>
+              </div>
+              <div className="brands-content">
+                <hr />
+                <ul className="brands-list">
+                  <li>
+                    <label htmlFor="brand-huawei">
+                      <input type="checkbox" id="brand-huawei"/>
+                      <span></span>
+                      هواوی
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="samsung" />
+                    <label htmlFor="samsung">سامسونگ</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="apple" />
+                    <label htmlFor="apple">اپل</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="sony" />
+                    <label htmlFor="sony">سونی</label>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="colors">
               <h3>رنگ</h3>
