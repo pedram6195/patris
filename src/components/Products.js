@@ -24,12 +24,10 @@ class Products extends Component {
           <section className="sidebar">
             <div className="price-limit">
               <input type="checkbox" id="price-limit-toggle" />
-              <div className="price-limit-head">
+              <label htmlFor="price-limit-toggle" className="price-limit-head">
                 <h3>محدوده قیمت</h3>
-                <label htmlFor="price-limit-toggle">
-                  <i className="fas fa-chevron-down"></i>
-                </label>
-              </div>
+                <i className="fas fa-chevron-down"></i>
+              </label>
               <div className="price-limit-content">
                 <hr />
                 <div className="range">
@@ -60,33 +58,54 @@ class Products extends Component {
             </div>
             <div className="brands">
               <input type="checkbox" id="brands-toggle" />
-              <div className="brands-head">
+              <label htmlFor="brands-toggle" className="brands-head">
                 <h3>برند</h3>
-                <label htmlFor="brands-toggle">
-                  <i className="fas fa-chevron-down"></i>
-                </label>
-              </div>
+                <i className="fas fa-chevron-down"></i>
+              </label>
               <div className="brands-content">
                 <hr />
                 <ul className="brands-list">
                   <li>
-                    <label htmlFor="brand-huawei">
-                      <input type="checkbox" id="brand-huawei"/>
+                    <label
+                      htmlFor="brand-huawei"
+                      className="checkbox-container"
+                    >
+                      <input type="checkbox" id="brand-huawei" />
                       <span></span>
+                    </label>
+                    <label htmlFor="brand-huawei" className="checkbox-title">
                       هواوی
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="samsung" />
-                    <label htmlFor="samsung">سامسونگ</label>
+                    <label htmlFor="brand-apple" className="checkbox-container">
+                      <input type="checkbox" id="brand-apple" />
+                      <span></span>
+                    </label>
+                    <label htmlFor="brand-apple" className="checkbox-title">
+                      اپل
+                    </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="apple" />
-                    <label htmlFor="apple">اپل</label>
+                    <label
+                      htmlFor="brand-samsung"
+                      className="checkbox-container"
+                    >
+                      <input type="checkbox" id="brand-samsung" />
+                      <span></span>
+                    </label>
+                    <label htmlFor="brand-samsung" className="checkbox-title">
+                      سامسونگ
+                    </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sony" />
-                    <label htmlFor="sony">سونی</label>
+                    <label htmlFor="brand-sony" className="checkbox-container">
+                      <input type="checkbox" id="brand-sony" />
+                      <span></span>
+                    </label>
+                    <label htmlFor="brand-sony" className="checkbox-title">
+                      سونی
+                    </label>
                   </li>
                 </ul>
               </div>

@@ -11,8 +11,6 @@
     & > div {
       border: 1px solid rgba(0, 0, 0, 0.2);
       margin-bottom: 1rem;
-      padding: 1rem;
-      // min-height: 20rem;
       display: flex;
       flex-direction: column;
       border-radius: 3px;
@@ -33,21 +31,20 @@
           max-height: 30rem;
         }
         &:checked ~ .price-limit-head {
-          label i {
+          i {
             transform: rotate(-180deg);
           }
         }
       }
       .price-limit-head {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        label {
-          cursor: pointer;
-          i {
-            color: #444;
-            transition: all 0.5s;
-          }
+        padding: 1rem;
+        i {
+          color: #444;
+          transition: all 0.5s;
         }
       }
 
@@ -56,7 +53,7 @@
         max-height: 0;
         transition: all 0.5s ease;
         .range {
-          padding: 1rem 1.5rem;
+          padding: 1.5rem 2rem;
           display: flex;
           flex-direction: column;
           .range-details {
@@ -93,41 +90,86 @@
     .brands {
       #brands-toggle {
         display: none;
+        &:checked ~ .brands-content {
+          max-height: 100rem;
+        }
+        &:checked ~ .brands-head {
+          i {
+            transform: rotate(-180deg);
+          }
+        }
       }
       .brands-head {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+        i {
+          color: #444;
+          transition: all 0.5s;
+        }
       }
       .brands-content {
         overflow: hidden;
-        // max-height: 0;
+        max-height: 0;
         transition: all 0.5s ease;
         .brands-list {
           display: flex;
           flex-direction: column;
+          padding: 1rem;
           li {
-              margin: 1rem 0;
-              label {
-                position: relative;
-                cursor: pointer;
-                user-select: none;
-                input {
-                    position: absolute;
-                    opacity: 0;
-                    cursor: pointer;
-                    height: 0;
-                    width: 0;
+            margin: 0.5rem 0;
+            padding-right: 0.5rem;
+            display: flex;
+            align-items: center;
+            .checkbox-title {
+              user-select: none;
+              color: #333;
+              cursor: pointer;
+              &:hover {
+                color: #666;
+              }
+            }
+            .checkbox-container {
+              position: relative;
+              margin-left: 1rem;
+              cursor: pointer;
+              width: 2rem;
+              height: 2rem;
+              &:hover input ~ span {
+                background-color: #ccc;
+              }
+              input {
+                display: none;
+                &:checked ~ span {
+                  background-color: #2196f3;
                 }
-                span {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    height: 25px;
-                    width: 25px;
-                    background-color: #eee;
+                &:checked ~ span:after {
+                  display: block;
                 }
               }
+              span {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 2rem;
+                width: 2rem;
+                background-color: #eee;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  display: none;
+                  left: 7px;
+                  top: 2px;
+                  width: 4px;
+                  height: 10px;
+                  border: solid white;
+                  border-width: 0 3px 3px 0;
+                  transform: rotate(45deg);
+                }
+              }
+            }
           }
         }
       }
