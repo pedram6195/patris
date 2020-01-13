@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Range from "rc-slider/lib/Range";
+import Switch from "react-switch";
 
 import { toPersianNum } from "../helpers";
 
@@ -10,11 +11,19 @@ import "rc-slider/assets/index.css";
 import "../css/products.scss";
 
 class Products extends Component {
-  state = { sliderValues: [0, 3000000] };
+  state = {
+    sliderValues: [0, 3000000],
+    checked: false
+  };
 
   handleChange = sliderValues => {
     this.setState({ sliderValues });
   };
+
+  handleSwitchChange = checked => {
+    this.setState({ checked });
+  };
+
   render() {
     const { sliderValues } = this.state;
     return (
@@ -110,13 +119,74 @@ class Products extends Component {
                 </ul>
               </div>
             </div>
+
             <div className="colors">
-              <h3>رنگ</h3>
-              <hr />
+              <input type="checkbox" id="colors-toggle" />
+              <label htmlFor="colors-toggle" className="colors-head">
+                <h3>رنگ</h3>
+                <i className="fas fa-chevron-down"></i>
+              </label>
+              <div className="colors-content">
+                <hr />
+                <ul className="colors-list">
+                  <li>
+                    <label htmlFor="color-black" className="checkbox-container">
+                      <input type="checkbox" id="color-black" />
+                      <span></span>
+                    </label>
+                    <label htmlFor="color-black" className="checkbox-title">
+                      مشکی
+                    </label>
+                  </li>
+                  <li>
+                    <label htmlFor="color-white" className="checkbox-container">
+                      <input type="checkbox" id="color-white" />
+                      <span></span>
+                    </label>
+                    <label htmlFor="color-white" className="checkbox-title">
+                      سفید
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      htmlFor="color-silver"
+                      className="checkbox-container"
+                    >
+                      <input type="checkbox" id="color-silver" />
+                      <span></span>
+                    </label>
+                    <label htmlFor="color-silver" className="checkbox-title">
+                      نقره ای
+                    </label>
+                  </li>
+                  <li>
+                    <label htmlFor="color-blue" className="checkbox-container">
+                      <input type="checkbox" id="color-blue" />
+                      <span></span>
+                    </label>
+                    <label htmlFor="color-blue" className="checkbox-title">
+                      آبی
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </div>
+
             <div className="availablity">
-              <h3>فقط کالاهای موجود</h3>
-              <hr />
+              <input type="checkbox" id="availablity-toggle" />
+              <label htmlFor="availablity-toggle" className="availablity-head">
+                <h3>فقط کالاهای موجود</h3>
+                <i className="fas fa-chevron-down"></i>
+              </label>
+              <div className="availablity-content">
+                <hr />
+                <label>
+                  <Switch
+                    onChange={this.handleSwitchChange}
+                    checked={this.state.checked}
+                  />
+                </label>
+              </div>
             </div>
           </section>
           <section className="product-list">

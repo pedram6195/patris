@@ -87,7 +87,8 @@
         }
       }
     }
-    .brands {
+    .brands,
+    .colors {
       #brands-toggle {
         display: none;
         &:checked ~ .brands-content {
@@ -99,7 +100,19 @@
           }
         }
       }
-      .brands-head {
+      #colors-toggle {
+        display: none;
+        &:checked ~ .colors-content {
+          max-height: 100rem;
+        }
+        &:checked ~ .colors-head {
+          i {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+      .brands-head,
+      .colors-head {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -110,11 +123,13 @@
           transition: all 0.5s;
         }
       }
-      .brands-content {
+      .brands-content,
+      .colors-content {
         overflow: hidden;
         max-height: 0;
         transition: all 0.5s ease;
-        .brands-list {
+        .brands-list,
+        .colors-list {
           display: flex;
           flex-direction: column;
           padding: 1rem;
@@ -174,6 +189,37 @@
         }
       }
     }
+    .availablity {
+      #availablity-toggle {
+        display: none;
+        &:checked ~ .availablity-content {
+          max-height: 30rem;
+          padding-bottom: 0.5rem;
+        }
+        &:checked ~ .availablity-head {
+          i {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+      .availablity-head {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        i {
+          color: #444;
+          transition: all 0.5s;
+        }
+      }
+      .availablity-content {
+        overflow: hidden;
+        max-height: 0;
+        text-align: center;
+        transition: all 0.5s ease;
+      }
+    }
   }
   .product-list {
     flex-basis: 80%;
@@ -181,10 +227,29 @@
     border-radius: 3px;
     .filters {
       display: flex;
+      padding: 1rem;
+      background-color: #e3e3e3;
+      font-size: 1.4rem;
+      box-shadow: 0px 10px 20px -4px rgba(0,0,0,0.73);
+      span {
+        padding: 1rem;
+      }
       .filter-ul {
         display: flex;
+        margin-right: 1rem;
         li {
           list-style: none;
+          display: flex;
+          margin: 0 1rem;
+          border-radius: 8px;
+          background-color: #e1ccec;
+          &:hover {
+            background-color: #c9b6e4;
+          }
+          a {
+            padding: 1rem;
+            color: #698474;
+          }
         }
       }
     }
