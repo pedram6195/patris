@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "pace-js";
 import "pace-js/themes/blue/pace-theme-minimal.css";
 
-import "../css/fontiran.css";
-import "../css/app.scss";
+import "./fontiran.css";
+import "./app.scss";
 
-import routes from "../config/routes";
+import routes from "../../config/routes";
 
 import Navbar from "./Navbar";
 import Content from "./Content";
