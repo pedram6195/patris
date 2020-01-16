@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   background: linear-gradient(135deg, #1abc9c 20%, #2980b9 80%);
@@ -106,7 +107,7 @@ export const Button = styled.button`
   }
 `;
 
-export const LoginLink = styled.a`
+export const LoginLink = styled(Link)`
   font-size: 1.3rem;
   text-decoration: none;
   &:hover {

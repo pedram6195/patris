@@ -12,11 +12,12 @@ const Wrapper = styled.div`
 const CheckboxToggle = styled.input`
   display: none;
   &:checked ~ div {
-    max-height: 100rem;
+    max-height: 0;
+    overflow: hidden;
   }
   &:checked ~ label {
     i {
-      transform: rotate(-180deg);
+      transform: rotate(180deg);
     }
   }
 `;
@@ -39,8 +40,7 @@ const Head = styled.label`
 `;
 
 const Content = styled.div`
-  overflow: hidden;
-  max-height: 0;
+  max-height: 100rem;
   transition: all 0.5s ease;
   ${prop =>
     prop.center &&
@@ -61,7 +61,7 @@ export default class FilterBox extends Component {
         <CheckboxToggle type="checkbox" id={id} />
         <Head htmlFor={id}>
           <h3>{header}</h3>
-          <i className="fas fa-chevron-down"></i>
+          <i className="fas fa-chevron-up"></i>
         </Head>
         <Content center={this.props.center ? true : false}>
           <hr />

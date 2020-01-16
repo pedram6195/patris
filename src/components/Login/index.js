@@ -101,12 +101,12 @@ export default function Login() {
                 </Button>
               </FormItem>
               <FormItem>
-                <LoginLink href="/forgetPassword">
+                <LoginLink to="/forgetPassword">
                   رمز عبورم را فراموش کرده ام
                 </LoginLink>
               </FormItem>
               <FormItem>
-                <LoginLink href="/register">
+                <LoginLink to="/register">
                   حساب کاربری ندارید؟ ثبت نام کنید
                 </LoginLink>
               </FormItem>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import TopMenu from "../Home/TopMenu";
 import Sidebar from "./Sidebar";
 import Filters from "./Filters";
+import Item from "../reusable/Products/Item";
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,6 +19,13 @@ const ProductList = styled.section`
   border-radius: 3px;
 `;
 
+const ProductItems = styled.div`
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+
 class Products extends Component {
   render() {
     return (
@@ -27,22 +35,28 @@ class Products extends Component {
           <Sidebar />
           <ProductList>
             <Filters />
-            <div className="product-items">
-              <div className="item">
-                <div className="image">
-                  <a href="##">
-                    <img src="" alt="محصول" />
-                  </a>
-                </div>
-                <div className="description">
-                  <a href="##" className="title">
-                    لپ تاب ایسوس
-                  </a>
-                  <span className="price">۱۲,۰۰۰,۰۰۰ تومان</span>
-                  <span className="avaliable">موجود</span>
-                </div>
-              </div>
-            </div>
+            <ProductItems>
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+            </ProductItems>
           </ProductList>
         </Wrapper>
       </>

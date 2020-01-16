@@ -156,7 +156,7 @@ export default function Register() {
                 </Button>
               </FormItem>
               <FormItem>
-                <LoginLink href="/login">
+                <LoginLink to="/login">
                   حساب کاربری دارید؟ از اینجا وارد شوید
                 </LoginLink>
               </FormItem>
