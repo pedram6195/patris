@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/patris/static/css/main.6ae15867.chunk.css",
-    "main.js": "/patris/static/js/main.6d0c94e2.chunk.js",
-    "main.js.map": "/patris/static/js/main.6d0c94e2.chunk.js.map",
+    "main.js": "/patris/static/js/main.aeeb2e42.chunk.js",
+    "main.js.map": "/patris/static/js/main.aeeb2e42.chunk.js.map",
     "runtime-main.js": "/patris/static/js/runtime-main.56f76918.js",
     "runtime-main.js.map": "/patris/static/js/runtime-main.56f76918.js.map",
-    "static/css/2.2db508cc.chunk.css": "/patris/static/css/2.2db508cc.chunk.css",
-    "static/js/2.f4c189fd.chunk.js": "/patris/static/js/2.f4c189fd.chunk.js",
-    "static/js/2.f4c189fd.chunk.js.map": "/patris/static/js/2.f4c189fd.chunk.js.map",
+    "static/css/2.506fba23.chunk.css": "/patris/static/css/2.506fba23.chunk.css",
+    "static/js/2.d0f888a1.chunk.js": "/patris/static/js/2.d0f888a1.chunk.js",
+    "static/js/2.d0f888a1.chunk.js.map": "/patris/static/js/2.d0f888a1.chunk.js.map",
     "index.html": "/patris/index.html",
-    "precache-manifest.22e85ea60accf4cba7e7ea271b75c65b.js": "/patris/precache-manifest.22e85ea60accf4cba7e7ea271b75c65b.js",
+    "precache-manifest.7a6be4be4eeeb2a70897a8a851a1bba1.js": "/patris/precache-manifest.7a6be4be4eeeb2a70897a8a851a1bba1.js",
     "service-worker.js": "/patris/service-worker.js",
-    "static/css/2.2db508cc.chunk.css.map": "/patris/static/css/2.2db508cc.chunk.css.map",
+    "static/css/2.506fba23.chunk.css.map": "/patris/static/css/2.506fba23.chunk.css.map",
     "static/css/main.6ae15867.chunk.css.map": "/patris/static/css/main.6ae15867.chunk.css.map",
-    "static/js/2.f4c189fd.chunk.js.LICENSE": "/patris/static/js/2.f4c189fd.chunk.js.LICENSE",
+    "static/js/2.d0f888a1.chunk.js.LICENSE": "/patris/static/js/2.d0f888a1.chunk.js.LICENSE",
     "static/media/fontiran.css": "/patris/static/media/IRANSansWeb_UltraLight.eeb1edca.ttf",
     "static/media/Layer-16.png": "/patris/static/media/Layer-16.d5218345.png",
     "static/media/Layer-17.png": "/patris/static/media/Layer-17.02c00379.png",
@@ -28,9 +28,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.56f76918.js",
-    "static/css/2.2db508cc.chunk.css",
-    "static/js/2.f4c189fd.chunk.js",
+    "static/css/2.506fba23.chunk.css",
+    "static/js/2.d0f888a1.chunk.js",
     "static/css/main.6ae15867.chunk.css",
-    "static/js/main.6d0c94e2.chunk.js"
+    "static/js/main.aeeb2e42.chunk.js"
   ]
 }
