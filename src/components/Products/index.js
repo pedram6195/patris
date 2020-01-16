@@ -1,43 +1,32 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
-import TopMenu from "./TopMenu";
+import TopMenu from "../Home/TopMenu";
 import Sidebar from "./Sidebar";
+import Filters from "./Filters";
 
+const Wrapper = styled.div`
+  display: flex;
+  min-height: 40rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+`;
 
-
-import "../css/products.scss";
+const ProductList = styled.section`
+  flex-basis: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+`;
 
 class Products extends Component {
-
-
   render() {
-    
     return (
       <>
         <TopMenu />
-        <div className="products fade row">
+        <Wrapper className="fade row">
           <Sidebar />
-          <section className="product-list">
-            <div className="filters">
-              <span>مرتب سازی براساس : </span>
-              <ul className="filter-ul">
-                <li>
-                  <a href="##">پربازدیدترین</a>
-                </li>
-                <li>
-                  <a href="##">پرفروش‌ترین‌</a>
-                </li>
-                <li>
-                  <a href="##">جدیدترین</a>
-                </li>
-                <li>
-                  <a href="##">ارزان‌ترین</a>
-                </li>
-                <li>
-                  <a href="##">گران‌ترین</a>
-                </li>
-              </ul>
-            </div>
+          <ProductList>
+            <Filters />
             <div className="product-items">
               <div className="item">
                 <div className="image">
@@ -54,8 +43,8 @@ class Products extends Component {
                 </div>
               </div>
             </div>
-          </section>
-        </div>
+          </ProductList>
+        </Wrapper>
       </>
     );
   }

@@ -1,9 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik } from "formik";
 import * as Yup from "yup";
 
-import "../css/register.scss";
+import {
+  Container,
+  Wrapper,
+  Header,
+  Form,
+  UserInfo,
+  FormItem,
+  Input,
+  Rules,
+  Button,
+  LoginLink,
+  Error
+} from "../reusable/Register";
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string()
@@ -27,15 +38,15 @@ const RegisterSchema = Yup.object().shape({
 export default function Register() {
   document.title = "ثبت نام";
   return (
-    <div className="reg fade">
-      <div className="register">
-        <header className="register-header text-center">
+    <Container className="fade">
+      <Wrapper>
+        <Header>
           <h1>ثبت نام</h1>
           <p>
             با عضویت در فروشگاه پاتریس میتوانید از امکانات بیشتر و همچنین
             تخفیفات ویژه بهره مند شوید
           </p>
-        </header>
+        </Header>
         <Formik
           initialValues={{
             name: "",
@@ -53,69 +64,79 @@ export default function Register() {
             }, 400);
           }}
         >
-          {({ isSubmitting }) => (
-            <Form className="register-box">
-              <label htmlFor="user-info" className="user-info">
-                اطلاعات کاربری
-              </label>
-              <div className="form-item">
-                <Field
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            isSubmitting
+          }) => (
+            <Form onSubmit={handleSubmit}>
+              <UserInfo>اطلاعات کاربری</UserInfo>
+              <FormItem>
+                <Input
                   type="text"
                   name="name"
                   id="name"
-                  className="form-control"
                   placeholder="نام و نام خانوادگی خود را وارد کنید (فقط فارسی)"
                   autoComplete="off"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.name}
                 />
-                <ErrorMessage name="name" component="div" className="error" />
-              </div>
-              <div className="form-item">
-                <Field
+                <Error>{errors.name && touched.name && errors.name}</Error>
+              </FormItem>
+              <FormItem>
+                <Input
                   type="text"
                   name="email"
                   id="email"
-                  className="form-control"
                   placeholder="ایمیل خود را وارد کنید"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
                 />
-                <ErrorMessage name="email" component="div" className="error" />
-              </div>
-              <div className="form-item">
-                <Field
+                <Error>{errors.email && touched.email && errors.email}</Error>
+              </FormItem>
+              <FormItem>
+                <Input
                   type="text"
                   name="username"
                   id="username"
-                  className="form-control"
                   placeholder="نام کاربری خود را وارد کنید"
                   autoComplete="off"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.username}
                 />
-                <ErrorMessage
-                  name="username"
-                  component="div"
-                  className="error"
-                />
-              </div>
-              <div className="form-item">
-                <Field
+                <Error>
+                  {errors.username && touched.username && errors.username}
+                </Error>
+              </FormItem>
+              <FormItem>
+                <Input
                   type="password"
                   name="password"
                   id="password"
-                  className="form-control"
                   placeholder="رمز عبور را وارد کنید"
                   autoComplete="off"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
                 />
-                <ErrorMessage
-                  name="password"
-                  component="div"
-                  className="error"
-                />
-              </div>
-              <div className="form-item">
-                <label htmlFor="rules" className="rules">
-                  <Field
+                <Error>{errors.password && touched.password && errors.password}</Error>
+              </FormItem>
+              <FormItem>
+                <Rules htmlFor="rules">
+                  <input
                     type="checkbox"
                     name="rules"
                     id="rules"
-                    className="rule-checkbox"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.rules}
                   />
                   <span>
                     با تمام{" "}
@@ -124,23 +145,25 @@ export default function Register() {
                     </a>{" "}
                     سایت موافقم
                   </span>
-                </label>
-                <ErrorMessage name="rules" component="div" className="error" />
-              </div>
-              <div className="form-item">
-                <button type="submit" disabled={isSubmitting}>
+                </Rules>
+                <Error>
+                  {errors.rules && touched.rules && errors.rules}
+                </Error>
+              </FormItem>
+              <FormItem>
+                <Button type="submit" disabled={isSubmitting}>
                   ثبت نام
-                </button>
-              </div>
-              <div className="form-item">
-                <Link to="/login" className="login-link">
+                </Button>
+              </FormItem>
+              <FormItem>
+                <LoginLink href="/login">
                   حساب کاربری دارید؟ از اینجا وارد شوید
-                </Link>
-              </div>
+                </LoginLink>
+              </FormItem>
             </Form>
           )}
         </Formik>
-      </div>
-    </div>
+      </Wrapper>
+    </Container>
   );
 }

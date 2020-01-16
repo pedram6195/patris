@@ -4,46 +4,9 @@ import Range from "rc-slider/lib/Range";
 
 import "rc-slider/assets/index.css";
 
-import { toPersianNum } from "../helpers";
+import { toPersianNum } from "../../../helpers";
 
-const PriceLimitToggle = styled.input`
-  display: none;
-  &:checked ~ div {
-    max-height: 100rem;
-  }
-  &:checked ~ label {
-    i {
-      transform: rotate(-180deg);
-    }
-  }
-`;
-
-const PriceLimitHead = styled.label`
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: #333;
-  }
-  i {
-    color: #444;
-    transition: all 0.5s;
-  }
-`;
-
-const PriceLimitContent = styled.div`
-  overflow: hidden;
-  max-height: 0;
-  transition: all 0.5s ease;
-  hr {
-    margin: 0.8rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-`;
+import FilterBox from "../../reusable/Sidebar/FilterBox";
 
 const StyledRange = styled.div`
   padding: 1.5rem 2rem;
@@ -92,40 +55,32 @@ export default class PriceLimit extends Component {
   render() {
     const { sliderValues } = this.state;
     return (
-      <div>
-        <PriceLimitToggle type="checkbox" id="price-limit-toggle" />
-        <PriceLimitHead htmlFor="price-limit-toggle">
-          <h3>محدوده قیمت</h3>
-          <i className="fas fa-chevron-down"></i>
-        </PriceLimitHead>
-        <PriceLimitContent>
-          <hr />
-          <StyledRange>
-            <Range
-              min={0}
-              max={3000000}
-              onChange={this.handleChange}
-              defaultValue={sliderValues}
-              allowCross={false}
-              step={50000}
-              reverse={true}
-            />
-            <RangeDetails>
-              <FromTo>
-                <span>از</span>
-                <span>{toPersianNum(sliderValues[0])}</span>
-                <span>تومان</span>
-              </FromTo>
-              <FromTo>
-                <span>تا</span>
-                <span>{toPersianNum(sliderValues[1])}</span>
-                <span>تومان</span>
-              </FromTo>
-            </RangeDetails>
-            <RangeSubmit>اعمال</RangeSubmit>
-          </StyledRange>
-        </PriceLimitContent>
-      </div>
+      <FilterBox header="محدوده قیمت" id="price-limit">
+        <StyledRange>
+          <Range
+            min={0}
+            max={3000000}
+            onChange={this.handleChange}
+            defaultValue={sliderValues}
+            allowCross={false}
+            step={50000}
+            reverse={true}
+          />
+          <RangeDetails>
+            <FromTo>
+              <span>از</span>
+              <span>{toPersianNum(sliderValues[0])}</span>
+              <span>تومان</span>
+            </FromTo>
+            <FromTo>
+              <span>تا</span>
+              <span>{toPersianNum(sliderValues[1])}</span>
+              <span>تومان</span>
+            </FromTo>
+          </RangeDetails>
+          <RangeSubmit>اعمال</RangeSubmit>
+        </StyledRange>
+      </FilterBox>
     );
   }
 }

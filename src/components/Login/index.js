@@ -1,9 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik } from "formik";
 import * as Yup from "yup";
 
-import "../css/register.scss";
+import {
+  Container,
+  Wrapper,
+  Header,
+  Form,
+  UserInfo,
+  FormItem,
+  Input,
+  Rules,
+  Button,
+  LoginLink,
+  Error
+} from "../reusable/Register";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -12,18 +23,18 @@ const LoginSchema = Yup.object().shape({
   password: Yup.string().required("این فیلد نباید خالی باشد")
 });
 
-export default function Register() {
+export default function Login() {
   document.title = "ورود";
   return (
-    <div className="reg fade">
-      <div className="register">
-        <header className="register-header text-center">
+    <Container className="fade">
+      <Wrapper>
+        <Header>
           <h1>ورود به سامانه</h1>
           <p>
             با ورود به فروشگاه پاتریس میتوانید از امکانات بیشتر و همچنین تخفیفات
             ویژه بهره مند شوید
           </p>
-        </header>
+        </Header>
         <Formik
           initialValues={{
             email: "",
@@ -38,68 +49,71 @@ export default function Register() {
             }, 400);
           }}
         >
-          {({ isSubmitting }) => (
-            <Form className="register-box">
-              <label htmlFor="user-info" className="user-info">
-                اطلاعات کاربری
-              </label>
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            isSubmitting
+          }) => (
+            <Form onSubmit={handleSubmit}>
+              <UserInfo>اطلاعات کاربری</UserInfo>
 
-              <div className="form-item">
-                <Field
+              <FormItem>
+                <Input
                   type="text"
                   name="email"
                   id="email"
-                  className="form-control"
                   placeholder="ایمیل خود را وارد کنید"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
                 />
-                <ErrorMessage name="email" component="div" className="error" />
-              </div>
+                <Error>{errors.email && touched.email && errors.email}</Error>
+              </FormItem>
 
-              <div className="form-item">
-                <Field
+              <FormItem>
+                <Input
                   type="password"
                   name="password"
                   id="password"
-                  className="form-control"
                   placeholder="رمز عبور را وارد کنید"
                   autoComplete="off"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
                 />
-                <ErrorMessage
-                  name="password"
-                  component="div"
-                  className="error"
-                />
-              </div>
-              <div className="form-item">
-                <label htmlFor="rules" className="rules">
-                  <Field
-                    type="checkbox"
-                    name="rules"
-                    id="rules"
-                    className="rule-checkbox"
-                  />
-                  <span>مرا به خاطر بسپار</span>
-                </label>
-                <ErrorMessage name="rules" component="div" className="error" />
-              </div>
-              <div className="form-item">
-                <button type="submit" disabled={isSubmitting}>
+                <Error>
+                  {errors.password && touched.password && errors.password}
+                </Error>
+              </FormItem>
+              <FormItem>
+                <Rules htmlFor="rules">
+                  <input type="checkbox" name="rules" id="rules" />
+                  <span> مرا به خاطر بسپار</span>
+                </Rules>
+              </FormItem>
+              <FormItem>
+                <Button type="submit" disabled={isSubmitting}>
                   ورود
-                </button>
-              </div>
-              <div className="form-item">
-                <Link to="/forgetPassword" className="login-link">
+                </Button>
+              </FormItem>
+              <FormItem>
+                <LoginLink href="/forgetPassword">
                   رمز عبورم را فراموش کرده ام
-                </Link>
-                <br />
-                <Link to="/register" className="login-link">
+                </LoginLink>
+              </FormItem>
+              <FormItem>
+                <LoginLink href="/register">
                   حساب کاربری ندارید؟ ثبت نام کنید
-                </Link>
-              </div>
+                </LoginLink>
+              </FormItem>
             </Form>
           )}
         </Formik>
-      </div>
-    </div>
+      </Wrapper>
+    </Container>
   );
 }
