@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/patris/static/css/main.6ae15867.chunk.css",
-    "main.js": "/patris/static/js/main.aeeb2e42.chunk.js",
-    "main.js.map": "/patris/static/js/main.aeeb2e42.chunk.js.map",
+    "main.js": "/patris/static/js/main.0a4a47a5.chunk.js",
+    "main.js.map": "/patris/static/js/main.0a4a47a5.chunk.js.map",
     "runtime-main.js": "/patris/static/js/runtime-main.56f76918.js",
     "runtime-main.js.map": "/patris/static/js/runtime-main.56f76918.js.map",
     "static/css/2.506fba23.chunk.css": "/patris/static/css/2.506fba23.chunk.css",
     "static/js/2.d0f888a1.chunk.js": "/patris/static/js/2.d0f888a1.chunk.js",
     "static/js/2.d0f888a1.chunk.js.map": "/patris/static/js/2.d0f888a1.chunk.js.map",
     "index.html": "/patris/index.html",
-    "precache-manifest.7a6be4be4eeeb2a70897a8a851a1bba1.js": "/patris/precache-manifest.7a6be4be4eeeb2a70897a8a851a1bba1.js",
+    "precache-manifest.fac3008df07cfae6f3f2aa03029c2cef.js": "/patris/precache-manifest.fac3008df07cfae6f3f2aa03029c2cef.js",
     "service-worker.js": "/patris/service-worker.js",
     "static/css/2.506fba23.chunk.css.map": "/patris/static/css/2.506fba23.chunk.css.map",
     "static/css/main.6ae15867.chunk.css.map": "/patris/static/css/main.6ae15867.chunk.css.map",
@@ -31,6 +31,6 @@
     "static/css/2.506fba23.chunk.css",
     "static/js/2.d0f888a1.chunk.js",
     "static/css/main.6ae15867.chunk.css",
-    "static/js/main.aeeb2e42.chunk.js"
+    "static/js/main.0a4a47a5.chunk.js"
   ]
 }
