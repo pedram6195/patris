@@ -11,12 +11,16 @@ const Wrapper = styled.div`
   min-height: 40rem;
   justify-content: space-between;
   margin-bottom: 4rem;
+  position: relative;
 `;
 
 const ProductList = styled.section`
-  flex-basis: 80%;
+  width: 80%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const ProductItems = styled.div`
