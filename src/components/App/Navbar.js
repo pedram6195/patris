@@ -9,6 +9,12 @@ const TopNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    max-height: 4.5rem;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
   li {
     list-style: none;
     padding: 1.5rem 2rem;
@@ -26,9 +32,20 @@ const TopNavRight = styled.ul`
   li.active {
     background-color: #333;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 767px) {
     flex-direction: column;
     width: 100%;
+  }
+  li:first-child {
+    display: flex;
+    justify-content: space-between;
+    label {
+      display: flex;
+      align-self: center;
+      @media (min-width: 767px) {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -38,7 +55,15 @@ const TopNavLeft = styled.ul`
     background-color: #333;
   }
   @media (max-width: 767px) {
-    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+const ToggleTopNavbar = styled.input`
+  display: none;
+  &:checked + nav {
+    max-height: 100rem;
   }
 `;
 
@@ -49,12 +74,16 @@ class Navbar extends React.Component {
   render() {
     return (
       <header>
+        <ToggleTopNavbar type="checkbox" id="toggle-top-navbar" />
         <TopNav>
           <TopNavRight>
             <li className={this.getNavLinkClass("/")}>
               <NavLink exact to="/" activeClassName="active">
                 فروشگاه زنجیره ای پاتریس
               </NavLink>
+              <label htmlFor="toggle-top-navbar">
+                <i className="fas fa-bars"></i>
+              </label>
             </li>
             <li className={this.getNavLinkClass("/register")}>
               <NavLink to="/register" activeClassName="active">
