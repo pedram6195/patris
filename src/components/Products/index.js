@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 import TopMenu from "../Home/TopMenu";
 import Sidebar from "./Sidebar";
@@ -31,6 +32,16 @@ const ProductItems = styled.div`
 `;
 
 class Products extends Component {
+  state = {
+    products: []
+  };
+
+  componentDidMount() {
+    axios.get(`http://localhost:8000/api/products`).then(res => {
+      const products = res.data;
+      this.setState({ products });
+    });
+  }
   render() {
     return (
       <>
@@ -40,26 +51,9 @@ class Products extends Component {
           <ProductList>
             <Filters />
             <ProductItems>
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
+              {this.state.products.map(product => {
+                return <li key={product.id}>{product.title}</li>;
+              })}
             </ProductItems>
           </ProductList>
         </Wrapper>
