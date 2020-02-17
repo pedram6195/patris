@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66d9be9256e715ffe036d23e5bff02f4",
+    "revision": "39b7c0f9cf1e2758fd420212747b1c26",
     "url": "/patris/index.html"
   },
   {
