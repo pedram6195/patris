@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/patris/static/css/main.6ae15867.chunk.css",
-    "main.js": "/patris/static/js/main.cc64626b.chunk.js",
-    "main.js.map": "/patris/static/js/main.cc64626b.chunk.js.map",
+    "main.css": "/patris/static/css/main.7091d26c.chunk.css",
+    "main.js": "/patris/static/js/main.f101bedd.chunk.js",
+    "main.js.map": "/patris/static/js/main.f101bedd.chunk.js.map",
     "runtime-main.js": "/patris/static/js/runtime-main.56f76918.js",
     "runtime-main.js.map": "/patris/static/js/runtime-main.56f76918.js.map",
-    "static/css/2.506fba23.chunk.css": "/patris/static/css/2.506fba23.chunk.css",
-    "static/js/2.d0f888a1.chunk.js": "/patris/static/js/2.d0f888a1.chunk.js",
-    "static/js/2.d0f888a1.chunk.js.map": "/patris/static/js/2.d0f888a1.chunk.js.map",
+    "static/css/2.f030cd79.chunk.css": "/patris/static/css/2.f030cd79.chunk.css",
+    "static/js/2.0b7583e7.chunk.js": "/patris/static/js/2.0b7583e7.chunk.js",
+    "static/js/2.0b7583e7.chunk.js.map": "/patris/static/js/2.0b7583e7.chunk.js.map",
     "index.html": "/patris/index.html",
-    "precache-manifest.c360d03d6adc26efb0f41060a3f46738.js": "/patris/precache-manifest.c360d03d6adc26efb0f41060a3f46738.js",
+    "precache-manifest.ccd28deedbd37532a950824e7e6862fe.js": "/patris/precache-manifest.ccd28deedbd37532a950824e7e6862fe.js",
     "service-worker.js": "/patris/service-worker.js",
-    "static/css/2.506fba23.chunk.css.map": "/patris/static/css/2.506fba23.chunk.css.map",
-    "static/css/main.6ae15867.chunk.css.map": "/patris/static/css/main.6ae15867.chunk.css.map",
-    "static/js/2.d0f888a1.chunk.js.LICENSE": "/patris/static/js/2.d0f888a1.chunk.js.LICENSE",
+    "static/css/2.f030cd79.chunk.css.map": "/patris/static/css/2.f030cd79.chunk.css.map",
+    "static/css/main.7091d26c.chunk.css.map": "/patris/static/css/main.7091d26c.chunk.css.map",
+    "static/js/2.0b7583e7.chunk.js.LICENSE": "/patris/static/js/2.0b7583e7.chunk.js.LICENSE",
     "static/media/fontiran.css": "/patris/static/media/IRANSansWeb_UltraLight.eeb1edca.ttf",
     "static/media/Layer-16.png": "/patris/static/media/Layer-16.d5218345.png",
     "static/media/Layer-17.png": "/patris/static/media/Layer-17.02c00379.png",
@@ -28,9 +28,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.56f76918.js",
-    "static/css/2.506fba23.chunk.css",
-    "static/js/2.d0f888a1.chunk.js",
-    "static/css/main.6ae15867.chunk.css",
-    "static/js/main.cc64626b.chunk.js"
+    "static/css/2.f030cd79.chunk.css",
+    "static/js/2.0b7583e7.chunk.js",
+    "static/css/main.7091d26c.chunk.css",
+    "static/js/main.f101bedd.chunk.js"
   ]
 }
